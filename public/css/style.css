@@ -1,0 +1,61 @@
+/* Mengatur ulang beberapa styling default */
+body {
+    font-family: "Ubuntu Sans", serif !important;
+    font-weight: bold !important;
+    background-color: #1f1f1f !important;
+}
+
+.navbar {
+    background-color: #1f1f1f !important;
+}
+
+#about {
+    font-weight: bold !important;
+}
+
+
+.image-container {
+    overflow: hidden;
+    position: relative; 
+    width: 100%; 
+    height: auto; 
+    border-radius: 20px;
+}
+
+/* Gambar */
+.yoga {
+    width: 100%;
+    height: auto; 
+    transition: transform 0.5s ease; 
+}
+
+
+.yoga:hover {
+    filter: grayscale(70%);
+}
+
+
+.yoga:hover {
+    transform: scale(1.1) rotate(7deg); 
+}
+
+.red-text {
+    color: #FF1E1E;
+}
+
+.blue-text {
+    color: #00FFFF;
+}
+
+.purple-text {
+    color: #D20062;
+}
+
+.yellow-text {
+    color: #F3CA52;
+}
+
+.navbar-blur {
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+}
