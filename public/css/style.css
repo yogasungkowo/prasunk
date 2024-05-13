@@ -1,4 +1,9 @@
 /* Mengatur ulang beberapa styling default */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px !important;
+}
+
 body {
     font-family: "Ubuntu Sans", serif !important;
     font-weight: bold !important;
@@ -42,7 +47,7 @@ body {
 
 .yoga-about:hover {
     filter:  saturate(171%);
-    transform: scale(1.5) rotate(7deg) translate(0px, 53px) !important;
+    transform: scale(1.5) rotate(-7deg) translate(0px, 53px) !important;
     box-shadow: 11px 10px 1px 1px rgba(255, 9, 9, 0.3) !important;
 }
 
@@ -54,7 +59,7 @@ body {
 
 .yoga:hover {
     filter:  saturate(171%);
-    transform: scale(1.5) rotate(7deg); 
+    transform: scale(1.5) rotate(7deg) translate(0px, -40px); 
 }
 
 .red-text {

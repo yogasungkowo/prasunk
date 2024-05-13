@@ -19,6 +19,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Prasunk</title>
 </head>
@@ -231,126 +232,60 @@
 
         <section id="article">
             <h3 class="fs-3 text-white text-center fw-bold my-5">Article</h1>
-                <!-- Slider main container -->
-                <div class="swiper text-white">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        ...
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
-                </div>
         </section>
     </main>
+
+
 
     <script>
         AOS.init();
     </script>
+    <script src="/asset/js/script.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-
-        window.addEventListener('scroll', function() {
-            var navbar = document.querySelector('.navbar');
-            if (window.scrollY > 0) {
-                navbar.classList.add('blur');
-            } else {
-                navbar.classList.remove('blur');
-            }
-        });
-
-
         let typedRunningText = new Typed(".running-text", {
-            strings: [
-                "<span class='red-text'>System Administrator</span>",
-                "<span class='blue-text'>Web Developer</span>",
-                "<span class='purple-text'>Cyber Security Enthusiast</span>",
-                "<span class='yellow-text'>IBM Cloud Practitioner</span>"
-            ],
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 1000,
-            loop: true,
-        });
+    strings: [
+        "<span class='red-text'>System Administrator</span>",
+        "<span class='blue-text'>Web Developer</span>",
+        "<span class='purple-text'>Cyber Security Enthusiast</span>",
+        "<span class='yellow-text'>IBM Cloud Practitioner</span>"
+    ],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: true,
+});
 
-        let typedAboutName = new Typed(".about-name", {
-            strings: ["Prayoga Sungkowo"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 1000,
-            loop: false,
-        });
+let typedAboutName = new Typed(".about-name", {
+    strings: ["Prayoga Sungkowo"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: false,
+});
 
-        let typedAboutCountry = new Typed(".about-country", {
-            strings: ["Indonesia"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 1000,
-            loop: false,
-        });
+let typedAboutCountry = new Typed(".about-country", {
+    strings: ["Indonesia"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: false,
+});
 
-        let typedAboutEmail = new Typed(".about-email", {
-            strings: ["prayogasungkowo12@gmail.com"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 1000,
-            loop: false,
-        });
+let typedAboutEmail = new Typed(".about-email", {
+    strings: ["prayogasungkowo12@gmail.com"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: false,
+});
 
-        let typedAboutPhone = new Typed(".about-phone", {
-            strings: ["+6289525760626"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            backDelay: 1000,
-            loop: false,
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const navLinks = document.querySelectorAll(".nav-link");
-
-            function removeActiveClass() {
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                });
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener("click", function() {
-                    removeActiveClass();
-                    this.classList.add("active");
-                });
-            });
-        });
+let typedAboutPhone = new Typed(".about-phone", {
+    strings: ["+6289525760626"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: false,
+});
     </script>
 </body>
 
