@@ -2,40 +2,58 @@
 body {
     font-family: "Ubuntu Sans", serif !important;
     font-weight: bold !important;
-    background-color: #1f1f1f !important;
+    background: rgb(0,0,0) !important;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 33%, rgba(84,14,1,1) 73%)  !important;
 }
 
 .navbar {
-    background-color: #1f1f1f !important;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar.blur {
+    backdrop-filter: blur(5px); 
 }
 
 #about {
     font-weight: bold !important;
 }
 
-
-.image-container {
+.image-about {
     overflow: hidden;
     position: relative; 
-    width: auto; 
+    width: 315px !important; 
     height: auto; 
     border-radius: 20px;
 }
 
-/* Gambar */
+.image-container {
+    overflow: hidden;
+    position: relative; 
+    width: 350px !important; 
+    height: auto; 
+    border-radius: 20px;
+}
+
+.yoga-about {
+    width: 100%;
+    height: auto; 
+    transition: transform 0.5s ease; 
+}
+
+.yoga-about:hover {
+    filter:  brightness(127%) contrast(103%) grayscale(103%);
+    transform: scale(1.5) rotate(7deg) translate(0px, 53px) !important;
+    box-shadow: 11px 10px 1px 1px rgba(255, 9, 9, 0.3) !important;
+}
+
 .yoga {
     width: 100%;
     height: auto; 
     transition: transform 0.5s ease; 
 }
 
-
 .yoga:hover {
-    filter: grayscale(70%);
-}
-
-
-.yoga:hover {
+    filter:  brightness(127%) contrast(103%) grayscale(103%);
     transform: scale(1.5) rotate(7deg); 
 }
 

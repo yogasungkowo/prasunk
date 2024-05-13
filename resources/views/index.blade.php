@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-blur" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-transparent">
         <div class="container-fluid mx-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,15 +69,15 @@
                                 src="/asset/instagram.png" alt="instagram" style="width: 44px, height: 44px"></a>
                         <a href="https://www.linkedin.com/in/prayoga-sungkowo/" target="_blank"><img class="me-3"
                                 src="/asset/linkedin_1.png" alt="linkedin" style="width: 40px; height: 40px"></a>
-                        <a href="https://github.com/yogasungkowo" target="_blank"><img src="/asset/github.png" alt="github"
-                                style="width: 44px; height: 44px"></a>
+                        <a href="https://github.com/yogasungkowo" target="_blank"><img src="/asset/github.png"
+                                alt="github" style="width: 44px; height: 44px"></a>
                     </div>
                     <h1 class="fs-3 mt-2 fw-bold" style="color: #8FFF00">$ ~ <a href="/asset/cv_yoga.pdf"
                             target="_blank" class="text-decoration-none"><span class="tulisan-merah"
                                 style="color: #FF1E1E">Download My CV</span></a></h1>
                 </div>
-                <div data-aos="zoom-in-up" class="image-container container col-sm-3 ms-1">
-                    <img class="yoga rounded-4" style="width: 350px; height:350px" src="/asset/prayoga_sungkowo.jpg" alt="Prayoga Sungkowo">
+                <div data-aos="zoom-in-up" class="image-container container ms-1 my-5">
+                    <img class="yoga rounded-4" src="/asset/prayoga_sungkowo.jpg" alt="Prayoga Sungkowo">
                 </div>
             </div>
         </section>
@@ -87,8 +87,10 @@
         <section id="about">
             <h1 data-aos="fade-up" class="text-white fw-bold fs-1 d-flex justify-content-center my-5">About</h1>
             <div data-aos="fade-up" class="container d-flex justify-content-center" data-bs-theme="dark">
-                <img data-aos="fade-up" class="img-fluid rounded-4" style="width: 315px; height: 450px"
-                    src="/asset/yoga_4.jpg" alt="Prayoga Sungkowo">
+                <div class="image-about">
+                    <img data-aos="fade-up" class="yoga-about rounded-4" style="width: 315px; height: 475px"
+                        src="/asset/yoga_4.jpg" alt="Prayoga Sungkowo">
+                </div>
                 <div class="about-text ms-5">
                     <h3 class="fs-3 fw-bold text-white mb-5"><span style="color:#8FFF00; font-weight:bold">$ ~</span>
                         Hello!</h3>
@@ -113,7 +115,7 @@
             </h1>
             <div class="container d-flex justify-content-center" data-aos="fade-right"
                 data-aos-easing="ease-in-sine">
-                <div class="image-container ps-5">
+                <div class="ps-5">
                     <img src="/asset/Sertifikat1.png" alt="Linux System Administration ADINUSA">
                 </div>
                 <div class="ms-5 col-md-7 align-items-center">
@@ -136,7 +138,7 @@
             </div>
             <div class="container d-flex justify-content-center mt-5 align-items-center" data-aos="fade-right"
                 data-aos-easing="ease-in-sine">
-                <div class="image-container ps-5">
+                <div class="ps-5">
                     <img src="/asset/Sertifikat2.png" alt="Linux System Administration ADINUSA">
                 </div>
                 <div class="ms-5 col-md-7 align-items-center">
@@ -156,7 +158,7 @@
             </div>
             <div class="container d-flex justify-content-center mt-5 align-items-center" data-aos="fade-right"
                 data-aos-easing="ease-in-sine">
-                <div class="image-container ps-5">
+                <div class="ps-5">
                     <img src="/asset/Sertifikat3.png" alt="Linux System Administration ADINUSA">
                 </div>
                 <div class="ms-5 col-md-7 align-items-center">
@@ -181,7 +183,7 @@
             <h1 data-aos="fade-up" class="text-white fw-bold fs-1 d-flex justify-content-center my-5">Experience</h1>
             <div class="container d-flex justify-content-center mt-5 align-items-center" data-aos="fade-right"
                 data-aos-easing="ease-in-sine">
-                <div class="image-container ps-5">
+                <div class="ps-5">
                     <img class="rounded" style="width: 407px; height: 513px" src="/asset/experience1.jpg"
                         alt="HCAI Infinite Learning">
                 </div>
@@ -209,7 +211,7 @@
             </div>
             <div class="container d-flex justify-content-center mt-5 align-items-center" data-aos="fade-right"
                 data-aos-easing="ease-in-sine">
-                <div class="image-container ps-5">
+                <div class="ps-5">
                     <img class="rounded-4" style="width: 407px; height: 513px" src="/asset/experience2.jpg"
                         alt="PT Mabar Feed Indonesia">
                 </div>
@@ -228,11 +230,27 @@
         </section>
 
         <section id="article">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swipper-slide"></div>
+            <h3 class="fs-3 text-white text-center fw-bold my-5">Article</h1>
+                <!-- Slider main container -->
+                <div class="swiper text-white">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
-            </div>
         </section>
     </main>
 
@@ -240,6 +258,38 @@
         AOS.init();
     </script>
     <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('blur');
+            } else {
+                navbar.classList.remove('blur');
+            }
+        });
+
+
         let typedRunningText = new Typed(".running-text", {
             strings: [
                 "<span class='red-text'>System Administrator</span>",
