@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-transparent">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-transparent navbar-blur">
         <div class="container-fluid mx-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,7 +86,7 @@
 
     <main>
         <section id="about">
-            <h1 data-aos="fade-up" class="text-white fw-bold fs-1 d-flex justify-content-center my-5">About</h1>
+            <h1 data-aos="fade-up" aos-hide class="text-white fw-bold fs-1 d-flex justify-content-center my-5">About</h1>
             <div data-aos="fade-up" class="container d-flex justify-content-center" data-bs-theme="dark">
                 <div class="image-about">
                     <img data-aos="fade-up" class="yoga-about rounded-4" style="width: 315px; height: 475px"
@@ -240,53 +240,7 @@
     <script>
         AOS.init();
     </script>
-    <script src="/asset/js/script.js"></script>
-    <script>
-        let typedRunningText = new Typed(".running-text", {
-    strings: [
-        "<span class='red-text'>System Administrator</span>",
-        "<span class='blue-text'>Web Developer</span>",
-        "<span class='purple-text'>Cyber Security Enthusiast</span>",
-        "<span class='yellow-text'>IBM Cloud Practitioner</span>"
-    ],
-    typeSpeed: 50,
-    backSpeed: 50,
-    backDelay: 1000,
-    loop: true,
-});
-
-let typedAboutName = new Typed(".about-name", {
-    strings: ["Prayoga Sungkowo"],
-    typeSpeed: 50,
-    backSpeed: 50,
-    backDelay: 1000,
-    loop: false,
-});
-
-let typedAboutCountry = new Typed(".about-country", {
-    strings: ["Indonesia"],
-    typeSpeed: 50,
-    backSpeed: 50,
-    backDelay: 1000,
-    loop: false,
-});
-
-let typedAboutEmail = new Typed(".about-email", {
-    strings: ["prayogasungkowo12@gmail.com"],
-    typeSpeed: 50,
-    backSpeed: 50,
-    backDelay: 1000,
-    loop: false,
-});
-
-let typedAboutPhone = new Typed(".about-phone", {
-    strings: ["+6289525760626"],
-    typeSpeed: 50,
-    backSpeed: 50,
-    backDelay: 1000,
-    loop: false,
-});
-    </script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
