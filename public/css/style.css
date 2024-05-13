@@ -41,7 +41,7 @@ body {
 }
 
 .yoga-about:hover {
-    filter:  brightness(127%) contrast(103%) grayscale(103%);
+    filter:  saturate(171%);
     transform: scale(1.5) rotate(7deg) translate(0px, 53px) !important;
     box-shadow: 11px 10px 1px 1px rgba(255, 9, 9, 0.3) !important;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .yoga:hover {
-    filter:  brightness(127%) contrast(103%) grayscale(103%);
+    filter:  saturate(171%);
     transform: scale(1.5) rotate(7deg); 
 }
 
