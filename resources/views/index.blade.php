@@ -65,11 +65,11 @@
                     <h1 class="fs-1 fw-bold">I'm Prayoga <span style="color: #8FFF00">$</span>ungkowo</h1>
                     <h1 class="fs-3 fw-bold" style="color: #8FFF00">$ ~ <span class="running-text"></span></h1>
                     <div class="social img-fluid mt-3">
-                        <a href="https://www.instagram.com/prayogasungkowo/"><img class="me-3"
+                        <a href="https://www.instagram.com/prayogasungkowo/" target="_blank"><img class="me-3"
                                 src="/asset/instagram.png" alt="instagram" style="width: 44px, height: 44px"></a>
-                        <a href="https://www.linkedin.com/in/prayoga-sungkowo/"><img class="me-3"
+                        <a href="https://www.linkedin.com/in/prayoga-sungkowo/" target="_blank"><img class="me-3"
                                 src="/asset/linkedin_1.png" alt="linkedin" style="width: 40px; height: 40px"></a>
-                        <a href="https://github.com/yogasungkowo"><img src="/asset/github.png" alt="github"
+                        <a href="https://github.com/yogasungkowo" target="_blank"><img src="/asset/github.png" alt="github"
                                 style="width: 44px; height: 44px"></a>
                     </div>
                     <h1 class="fs-3 mt-2 fw-bold" style="color: #8FFF00">$ ~ <a href="/asset/cv_yoga.pdf"
@@ -77,7 +77,7 @@
                                 style="color: #FF1E1E">Download My CV</span></a></h1>
                 </div>
                 <div data-aos="zoom-in-up" class="image-container container col-sm-3 ms-1">
-                    <img class="yoga rounded-4" src="/asset/prayoga_sungkowo.jpg" alt="Prayoga Sungkowo">
+                    <img class="yoga rounded-4" style="width: 350px; height:350px" src="/asset/prayoga_sungkowo.jpg" alt="Prayoga Sungkowo">
                 </div>
             </div>
         </section>
