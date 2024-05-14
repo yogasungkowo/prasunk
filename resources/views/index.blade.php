@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
@@ -21,6 +22,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Prasunk</title>
 </head>
 
@@ -86,7 +90,8 @@
 
     <main>
         <section id="about">
-            <h1 data-aos="fade-up" aos-hide class="text-white fw-bold fs-1 d-flex justify-content-center my-5">About</h1>
+            <h1 data-aos="fade-up" aos-hide class="text-white fw-bold fs-1 d-flex justify-content-center my-5">About
+            </h1>
             <div data-aos="fade-up" class="container d-flex justify-content-center" data-bs-theme="dark">
                 <div class="image-about">
                     <img data-aos="fade-up" class="yoga-about rounded-4" style="width: 315px; height: 475px"
@@ -105,7 +110,7 @@
                     <h3 class="fs-3 fw-bold text-white my-5"><span style="color:#8FFF00; font-weight:bold">$ ~</span>
                         Phone <span class="about-phone" style="color: #8FFF00; margin-left: 90px"></span></h3>
                     <h3 class="fs-3 fw-bold mt-5" style="color:#8FFF00">$ ~ <a class="text-decoration-none"
-                            href="/asset/cv_yoga.pdf" target="_blank"><span
+                            href="/asset/cv_yoga.pdf" target="_blank"><span class="tulisan-merah"
                                 style="color:#FF1E1E; font-weight:bold">Download My CV</span></a></h3>
                 </div>
             </div>
@@ -134,7 +139,8 @@
                     </p>
                     <h3 class="fw-bold fs-4 pt-2" style="color: #8FFF00">$ ~ <a class="text-decoration-none"
                             href="https://adinusa.id/course/publisher/show/a5413e28-5a30-4535-b698-f3bfd38d4fe3"
-                            target="_blank"><span style="color:#FF1E1E">See Credentials</span></a></h3>
+                            target="_blank"><span class="tulisan-merah" style="color:#FF1E1E">See
+                                Credentials</span></a></h3>
                 </div>
             </div>
             <div class="container d-flex justify-content-center mt-5 align-items-center" data-aos="fade-right"
@@ -154,7 +160,8 @@
                     </p>
                     <h3 class="fw-bold fs-4 pt-2" style="color: #8FFF00">$ ~ <a class="text-decoration-none"
                             href="https://adinusa.id/course/publisher/show/a5413e28-5a30-4535-b698-f3bfd38d4fe3"
-                            target="_blank"><span style="color:#FF1E1E">See Credentials</span></a></h3>
+                            target="_blank"><span class="tulisan-merah" style="color:#FF1E1E">See
+                                Credentials</span></a></h3>
                 </div>
             </div>
             <div class="container d-flex justify-content-center mt-5 align-items-center" data-aos="fade-right"
@@ -175,7 +182,8 @@
                     </p>
                     <h3 class="fw-bold fs-4 pt-2" style="color: #8FFF00">$ ~ <a class="text-decoration-none"
                             href="https://adinusa.id/course/publisher/show/a5413e28-5a30-4535-b698-f3bfd38d4fe3"
-                            target="_blank"><span style="color:#FF1E1E">See Credentials</span></a></h3>
+                            target="_blank"><span class="tulisan-merah" style="color:#FF1E1E">See
+                                Credentials</span></a></h3>
                 </div>
             </div>
         </section>
@@ -207,7 +215,7 @@
                     </p>
                     <h3 class="fw-bold fs-4 pt-2" style="color: #8FFF00">$ ~ <a class="text-decoration-none"
                             href="https://linkedin.com/in/prayoga-sungkowo/" target="_blank"><span
-                                style="color:#FF1E1E">See More</span></a></h3>
+                                class="tulisan-merah" style="color:#FF1E1E">See More</span></a></h3>
                 </div>
             </div>
             <div class="container d-flex justify-content-center mt-5 align-items-center" data-aos="fade-right"
@@ -225,17 +233,99 @@
                     </p>
                     <h3 class="fw-bold fs-4 pt-2" style="color: #8FFF00">$ ~ <a class="text-decoration-none"
                             href="https://linkedin.com/in/prayoga-sungkowo" target="_blank"><span
-                                style="color:#FF1E1E">See More</span></a></h3>
+                                class="tulisan-merah" style="color:#FF1E1E">See More</span></a></h3>
                 </div>
             </div>
         </section>
 
         <section id="article">
-            <h3 class="fs-3 text-white text-center fw-bold my-5">Article</h1>
+            <h1 data-aos="fade-up" class="text-white fw-bold fs-1 d-flex justify-content-center my-5">Article</h1>
+            <div class="card_wrapper rounded-5">
+                <div class="container" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="owl-carousel slider_carousel">
+                                <div class="card_box">
+                                    <div class="container-img">
+                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
+                                            alt="Prayoga Sungkowo">
+                                    </div>
+                                    <div class="card_text">
+                                        <h4>Profile ID: 23456</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
+                                        </p>
+                                        <p>3 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <div class="container-img">
+                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
+                                            alt="Prayoga Sungkowo">
+                                    </div>
+                                    <div class="card_text">
+                                        <h4>Profile ID: 23456</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
+                                        </p>
+                                        <p>3 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <div class="container-img">
+                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
+                                            alt="Prayoga Sungkowo">
+                                    </div>
+                                    <div class="card_text">
+                                        <h4>Profile ID: 23456</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
+                                        </p>
+                                        <p>3 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <div class="container-img">
+                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
+                                            alt="Prayoga Sungkowo">
+                                    </div>
+                                    <div class="card_text">
+                                        <h4>Profile ID: 23456</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
+                                        </p>
+                                        <p>3 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label text-white fw-bold">Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-white">Email</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5 d-flex align-items-center">
+                        <h1 class="fs-1 fw-bold text-white">Contact Me</h1>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </main>
 
-
+    <script src="/js/owl.carousel.min.js"></script>
 
     <script>
         AOS.init();

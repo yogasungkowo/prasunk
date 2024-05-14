@@ -67,3 +67,29 @@ let typedAboutPhone = new Typed(".about-phone", {
     backDelay: 1000,
     loop: false,
 });
+
+function slider_carouselInit() {
+    $('.owl-carousel.slider_carousel').owlCarousel({
+        dots: false,
+        loop: true,
+        margin: 20,
+        stagePadding: 2,
+        autoplay: true,
+        nav: true,
+        navText: ["<i class='far fa-arrow-alt-circle-left text-white'></i>","<i class='far fa-arrow-alt-circle-right text-white'></i>"],
+        autoplayTimeout: 1500,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+}
+slider_carouselInit();
