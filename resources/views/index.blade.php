@@ -302,31 +302,61 @@
 
         <section id="contact">
             <div class="container d-flex justify-content-center">
-                <div class="row justify-content-center">
-                    <div class="col-md-5">
-                        <form>
-                            <div class="mb-3">
-                                <label for="name" name="name" class="form-label text-white fw-bold">Name</label>
-                                <input type="text" class="form-control underlined-input" id="name" placeholder="Name" >  
-                            </div>
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label text-white fw-bold">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label text-white fw-bold">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </form>
-                    </div>
-                    <div class="col-md-5 d-flex align-items-center">
-                        <h1 class="fs-1 fw-bold text-white">Contact Me</h1>
-                    </div>
+                <div class="col-md-4">
+                    <form data-aos="fade-right">
+                        <div class="group">
+                            <input type="text" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Name</label>
+                        </div>
+
+                        <div class="group">
+                            <input type="email" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="group">
+                            <textarea name="thoughts"></textarea>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Your Thoughts</label>
+                        </div>
+                        <button class="btn btn-dark">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <h1 class="fw-bold text-white contact-text">Contact</h1>
+                    <h1 class="contact-text" style="color: #8FFF00">$ ~ <span
+                            style="color: #ffff; font-weight: bold;">Me</span></h1>
                 </div>
             </div>
-            
         </section>
+
+        <footer>
+            <div class="p-3" style="background:#000000">
+                <div class="social img-fluid mt-3 d-flex justify-content-center align-items-center">
+                    <div class="logo-footer" style="margin-right: 100px">
+                        <a class="text-decoration-none text-white fs-1" style="margin-left: 50px !important;"
+                            href="#">Prasunk</a>
+                    </div>
+                    <a href="https://www.instagram.com/prayogasungkowo/" target="_blank"><img class="me-5"
+                            src="/asset/instagram.png" alt="instagram" style="width: 44px, height: 44px"></a>
+                    <a href="https://www.linkedin.com/in/prayoga-sungkowo/" target="_blank"><img class="me-5"
+                            src="/asset/linkedin_1.png" alt="linkedin" style="width: 40px; height: 40px"></a>
+                    <a href="https://github.com/yogasungkowo" target="_blank"><img src="/asset/github.png"
+                            alt="github" style="width: 44px; height: 44px"></a>
+                    <p class="text-white fs-5 align-items-center" style="margin-left: 50px">Made with love by <a
+                            class="text-decoration-none" href="https://www.linkedin.com/in/prayoga-sungkowo/"
+                            target="_blank"><span class="fw-bold" style="color: #FF1E1E;">Prayoga Sungkowo</span></a>
+                    </p>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <script src="/js/owl.carousel.min.js"></script>
