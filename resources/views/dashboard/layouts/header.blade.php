@@ -105,6 +105,7 @@
 
 <body>
     @yield('body')
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.1/classic/ckeditor.js"></script>
     <script src="/js/dashboard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"
         integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous">
@@ -113,6 +114,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"
         integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous">
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'),
+            {
+                ckfinder:
+                {
+                    uploadUrl:"{{ route('ckeditor.upload', ['_token'=>csrf_token()]) }}",
+                }
+            })
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        const title = document.querySelector('#title');
+        const slug = document.querySelector('#slug');
+
+        title.addEventListener('change', function() {
+            fetch('/dashboard/checkSlug?title=' + title.value)
+                .then(response => response.json())
+                .then(data => slug.value = data.slug)
+        });
+        document.addEventListener('trix-file-accept', function(e) {
+            e.preventDefault();
+        });
     </script>
 </body>
 </body>

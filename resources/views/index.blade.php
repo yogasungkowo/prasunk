@@ -187,58 +187,20 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="owl-carousel slider_carousel">
+                                @foreach ($post as $posts)
                                 <div class="card_box">
                                     <div class="container-img">
-                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
-                                            alt="Prayoga Sungkowo">
+                                        <img class="img-fluid w-100 rounded-5" src="{{ asset('/storage/article/'. $posts->image) }}"
+                                        alt="Prayoga Sungkowo">
                                     </div>
                                     <div class="card_text">
-                                        <h4>Profile ID: 23456</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
-                                        </p>
-                                        <p>3 hours ago</p>
-                                        <a href="../article/article" class="btn btn-dark">See more</a>
-                                    </div>
-                                </div>
-                                <div class="card_box">
-                                    <div class="container-img">
-                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
-                                            alt="Prayoga Sungkowo">
-                                    </div>
-                                    <div class="card_text">
-                                        <h4>Profile ID: 23456</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
-                                        </p>
-                                        <p>3 hours ago</p>
+                                        <h4>{{ $posts->title }}</h4>
+                                        <p class="post-body text-white">{!! $posts->body !!}</p>
+                                        <p>{{ $posts->created_at->diffForHumans() }}</p>
                                         <a href="/article" class="btn btn-dark">See more</a>
                                     </div>
                                 </div>
-                                <div class="card_box">
-                                    <div class="container-img">
-                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
-                                            alt="Prayoga Sungkowo">
-                                    </div>
-                                    <div class="card_text">
-                                        <h4>Profile ID: 23456</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
-                                        </p>
-                                        <p>3 hours ago</p>
-                                        <a href="../article/article" class="btn btn-dark">See more</a>
-                                    </div>
-                                </div>
-                                <div class="card_box">
-                                    <div class="container-img">
-                                        <img class="img-fluid w-100 rounded-5" src="/asset/yoga_4.jpg"
-                                            alt="Prayoga Sungkowo">
-                                    </div>
-                                    <div class="card_text">
-                                        <h4>Profile ID: 23456</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, necessitatibus.
-                                        </p>
-                                        <p>3 hours ago</p>
-                                        <a href="../article/article" class="btn btn-dark">See more</a>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

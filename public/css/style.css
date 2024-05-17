@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: "Ubuntu Sans", serif !important;
+    font-family: "Ubuntu Sans", sans-serif !important;
     font-weight: bold !important;
     background: rgb(0, 0, 0) !important;
     background: linear-gradient(

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Post;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
 
 class Dashboard extends Controller
 {
@@ -14,7 +17,8 @@ class Dashboard extends Controller
      */
     public function index(): View
     {
-        return view('dashboard.posts.index');
+        $post = Post::latest()->paginate(10);
+        return view('dashboard.posts.index', compact('post'));
     }
 
     /**
@@ -23,6 +27,7 @@ class Dashboard extends Controller
     public function create(): View
     {
         return view('dashboard.posts.create');
+
     }
 
     /**
@@ -32,54 +37,90 @@ class Dashboard extends Controller
     {
         $request->validate([
             'title' => 'required|min:10',
-            'slug' => 'required|min:5',
             'body' => 'required|min:5',
             'image' => 'required|image|mimes:jpeg,jpg,png|max:2048',
         ]);
 
         $image = $request->file('image');
-        $image->storeAs('article/image', $image->hashName());
+        $image->storeAs('public/article', $image->hashName());
 
         Post::create([
             'title' => $request->title,
-            'slug' => $request->slug,
             'body' => $request->body,
             'image' => $image->hashName(),
         ]);
 
-        return redirect()->route('dashboard.posts.index')->with(['success' => 'Berhasil menambahkan artikel!!']);
+
+        return redirect()->route('dashboard.index')->with(['success' => 'Berhasil menambahkan artikel!!']);
     }
 
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $slug): View
     {
-        //
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return view('dashboard.posts.show', compact('post'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $slug): View
     {
-        //
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return view('dashboard.posts.edit', compact('post'));
     }
+
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $slug): RedirectResponse
     {
-        //
+        $request->validate([
+            'title' => 'required|min:10',
+            'body' => 'required|min:5',
+            'image' => 'image|mimes:jpeg,jpg,png|max:2048', // image is optional
+        ]);
+
+        $post = Post::where('slug', $slug)->firstOrFail();
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $image->storeAs('public/article', $image->hashName());
+
+            // Delete old image
+            Storage::delete('public/article/' . $post->image);
+
+            $post->update([
+                'image' => $image->hashName(),
+            ]);
+        }
+
+        $post->update([
+            'title' => $request->title,
+            'body' => $request->body,
+            'slug' => Str::slug($request->title),
+        ]);
+
+        return redirect()->route('dashboard.index')->with(['success' => 'Artikel berhasil di update']);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $slug): RedirectResponse
     {
-        //
+        $post = Post::where('slug', $slug)->firstOrFail();
+
+        Storage::delete('public/article/' . $post->image);
+        $post->delete();
+
+        return redirect()->route('dashboard.index')->with(['success' => 'Artikel berhasil dihapus']);
     }
+
 }
+

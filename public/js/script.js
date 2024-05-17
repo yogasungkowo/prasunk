@@ -93,3 +93,19 @@ function slider_carouselInit() {
     });
 }
 slider_carouselInit();
+
+const pElement = document.querySelector('p.post-body');
+
+const text = pElement.textContent;
+const words = text.split(' ');
+const truncatedText = words.slice(0, 20).join(' ');
+
+pElement.textContent = truncatedText;
+
+// Wrap inner elements in new <p> elements
+const innerElements = pElement.querySelectorAll('*');
+innerElements.forEach((element) => {
+  const newPElement = document.createElement('p');
+  newPElement.appendChild(element.cloneNode(true));
+  pElement.replaceChild(newPElement, element);
+});
