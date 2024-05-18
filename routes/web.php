@@ -8,15 +8,13 @@ use App\Http\Controllers\CKEditorController;
 
 Route::get('/',  [PostController::class, 'index']);
 
-// Route::get('/article', PostController::class, 'index');
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::middleware(['auth'])->resource('/dashboard', Dashboard::class);
 
-Route::resource('/dashboard', Dashboard::class);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::prefix('dashboard')->name('dashboard.')->group(function () {
-    Route::resource('post', Dashboard::class)->parameters([
-        'post' => 'post:slug'
-    ]);
-});
 Route::post('/upload', [CKEditorController::class, 'upload'])->name('ckeditor.upload');
+
+Route::get('/article/{post:slug}', [PostController::class, 'article']);

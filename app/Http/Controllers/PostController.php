@@ -11,7 +11,15 @@ class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * 
      */
+
+     
+     public function article(Post $post)
+    {
+        return view('article.show', compact('post'));
+    }
+
     public function index() : View
     {
         $post = Post::latest()->paginate(4);

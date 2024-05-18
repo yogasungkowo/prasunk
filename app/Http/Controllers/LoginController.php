@@ -3,62 +3,51 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Menampilkan formulir login.
+     *
+     * @return \Illuminate\View\View
      */
-    public function index()
+    public function showLoginForm()
     {
-        return view('dashboard.login');
+        return view('login');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Menangani proses login pengguna.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
-    public function create()
+    public function login(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $credentials = $request->only('email', 'password');
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        if (Auth::attempt($credentials)) {
+            // Jika autentikasi berhasil, redirect ke lokasi yang diinginkan
+            return redirect()->intended('/products');
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+        // Jika autentikasi gagal, kembali ke formulir login dengan pesan error
+        return back()->withErrors(['email' => 'Email atau password salah.'])->withInput($request->only('email'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function logout(Request $request)
     {
-        //
-    }
+        Auth::logout();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }

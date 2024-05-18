@@ -1,21 +1,20 @@
 @extends('dashboard.layouts.main')
 @section('container')
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
+            <h1 class="h2">Tabel Daftar Article</h1>
         </div>
-
-        <h2>Tabel Daftar Artikel</h2>
-        <div class="table-responsive small">
-            <table class="table table-striped table-sm table-align-middle">
-                <thead class="text-center">
+        <div class="table-responsive small" style="margin: 0 1000px 0 20px">
+            <table class="table table-striped table-sm">
+                <thead class="">
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Title</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody class="text-center">
+                <tbody class="">
                     @forelse ($post as $posts)
                         
                     

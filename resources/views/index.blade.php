@@ -69,7 +69,7 @@
                 <div class="ms-5 col-md-7 align-items-center">
                     <h3 class="fw-bold fs-4" style="color: #8FFF00">$ ~ <span style="color: white">Linux System
                             Administrator - Adinusa</span></h3>
-                    <p class="fw-bold fs-8 col-xl-9 text-xxl-end" style="color: #C9C9C9">Certificates given after
+                    <p class="fw-bold fs-8 col-xl-9 " style="color: #C9C9C9">Certificates given after
                         successfully completing
                         courses and exams related to Linux System Administration at Adinusa, including
                     <ol class="fs-8" style="color:#C9C9C9">
@@ -93,7 +93,7 @@
                 <div class="ms-5 col-md-7 align-items-center">
                     <h3 class="fw-bold fs-4" style="color: #8FFF00">$ ~ <span style="color: white">Junior Web
                             Developer - BNSP</span></h3>
-                    <p class="fw-bold fs-8 col-xl-9 text-xxl-end" style="color: #C9C9C9">
+                    <p class="fw-bold fs-8 col-xl-9 " style="color: #C9C9C9">
                         Certification held by the National Professional Certification Agency (BNSP), after successfully
                         passing the eligibility test to hold the Junior Web Developer professional title.
                     <ol class="fw-bold" style="color:#C9C9C9">
@@ -114,7 +114,7 @@
                 <div class="ms-5 col-md-7 align-items-center">
                     <h3 class="fw-bold fs-4" style="color: #8FFF00">$ ~ <span style="color: white">IBM Cloud
                             Essentials</span></h3>
-                    <p class="fw-bold fs-8 col-xl-9 text-xxl-end" style="color: #C9C9C9">
+                    <p class="fw-bold fs-8 col-xl-9 " style="color: #C9C9C9">
                         Certificate awarded after successfully completing the IBM Cloud Essentials course, as well as
                         successfully completing the Final Exam from IBM Cloud Essentials.
                     <ol class="fw-bold" style="color:#C9C9C9">
@@ -142,7 +142,7 @@
                     <h3 class="fw-bold fs-4" style="color: #8FFF00">$ ~ <span style="color: white">Hybrid Cloud and
                             AI - IBM &
                             RHCSA Course At Infinite Learning Indonesia</span></h3>
-                    <p class="fw-bold fs-8 col-xl-9 text-xxl-end" style="color: #C9C9C9">
+                    <p class="fw-bold fs-8 col-xl-9 " style="color: #C9C9C9">
                         At Infinite Learning, I am participating in the MBKM MSIB program from KampusMerdeka, which is
                         the Red Hat Certified System Administrator - IBM AI & Cybersecurity Independent Study. In this
                         program, I am learning:
@@ -169,7 +169,7 @@
                 <div class="ms-5 col-md-7 align-items-center">
                     <h3 class="fw-bold fs-4" style="color: #8FFF00">$ ~ <span style="color: white">IT Support
                             Internship at PT Mabar Feed Indonesia</span></h3>
-                    <p class="fw-bold fs-8 col-xl-9 text-xxl-end" style="color: #C9C9C9">
+                    <p class="fw-bold fs-8 col-xl-9 " style="color: #C9C9C9">
                         I work as internship student at PT Mabar Feed Indonesia as IT Support Specialist. I do several
                         things like maintance the server, configuration the network, and migrating database.
                     </p>
@@ -191,13 +191,13 @@
                                 <div class="card_box">
                                     <div class="container-img">
                                         <img class="img-fluid w-100 rounded-5" src="{{ asset('/storage/article/'. $posts->image) }}"
-                                        alt="Prayoga Sungkowo">
+                                        alt="Article Image">
                                     </div>
                                     <div class="card_text">
                                         <h4>{{ $posts->title }}</h4>
-                                        <p class="post-body text-white">{!! $posts->body !!}</p>
+                                        <p class="post-body text-white">{!! Str::words($posts->body, 10, '...') !!}</p>
                                         <p>{{ $posts->created_at->diffForHumans() }}</p>
-                                        <a href="/article" class="btn btn-dark">See more</a>
+                                        <a href="/article/{{ $posts->slug }}" class="btn btn-dark">See more</a>
                                     </div>
                                 </div>
                                 @endforeach
@@ -207,7 +207,6 @@
                 </div>
             </div>
         </section>
-
         <section id="contact">
             <div class="container d-flex justify-content-center">
                 <div class="col-md-4">

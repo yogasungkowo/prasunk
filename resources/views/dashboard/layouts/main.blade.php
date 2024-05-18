@@ -63,14 +63,27 @@
 
                         <hr class="my-3">
 
-                        <ul class="nav flex-column mb-auto">
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                    <i class="bi bi-box-arrow-left"></i>
-                                    Sign out
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="container">
+                            <div class="row justify-content-end">
+                                <div class="col-md-12 text-end">
+                                        <ul class="nav flex-column mb-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();"
+                                                class="btn btn-danger">
+                                                    <i class="bi bi-box-arrow-left"></i>
+                                                    Sign out
+                                            </li>
+                                        </ul>
+                                    </a>
+                    
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,5 +124,23 @@
         integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous">
     </script>
     <script src="dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.getElementById('image');
+            const previewImage = document.getElementById('preview-image');
+    
+            input.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+    
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                };
+    
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+    
     </body>
 @endsection

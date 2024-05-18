@@ -109,3 +109,11 @@ innerElements.forEach((element) => {
   newPElement.appendChild(element.cloneNode(true));
   pElement.replaceChild(newPElement, element);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var images = document.querySelectorAll('.container-img img');
+    images.forEach(function(img) {
+        img.style.height = '1313px'; // Set tinggi gambar
+        img.style.width = '736px'; // Set lebar gambar
+    });
+});

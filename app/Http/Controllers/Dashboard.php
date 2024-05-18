@@ -36,7 +36,7 @@ class Dashboard extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'title' => 'required|min:10',
+            'title' => 'required|min:5',
             'body' => 'required|min:5',
             'image' => 'required|image|mimes:jpeg,jpg,png|max:2048',
         ]);

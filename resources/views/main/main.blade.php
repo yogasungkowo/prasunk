@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
@@ -70,6 +70,15 @@
         AOS.init();
     </script>
     <script src="/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var images = document.querySelectorAll('.container-img img');
+    images.forEach(function(img) {
+        img.style.height = '1313px'; // Set tinggi gambar
+        img.style.width = '736px'; // Set lebar gambar
+    });
+});
+    </script>
 </body>
 
 </html>
