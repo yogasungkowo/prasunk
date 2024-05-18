@@ -210,7 +210,9 @@
         <section id="contact">
             <div class="container d-flex justify-content-center">
                 <div class="col-md-4">
-                    <form data-aos="fade-right">
+                    <form method="POST" action="{{ route('contact.submit') }}" data-aos="fade-right">
+                        @csrf
+                        @method('POST')
                         <div class="group">
                             <input type="text" required>
                             <span class="highlight"></span>

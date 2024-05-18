@@ -11,7 +11,10 @@
         "vite": "^5.2.11"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-build-decoupled-document": "^41.4.2",
+        "@ckeditor/ckeditor5-font": "^41.4.2",
         "aos": "^2.3.4",
+        "ckeditor4": "^4.24.0",
         "ckeditor5": "^41.4.1",
         "gsap": "^3.12.5",
         "hover-effect": "^1.2.1",

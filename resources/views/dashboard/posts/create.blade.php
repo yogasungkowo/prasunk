@@ -52,7 +52,7 @@
 
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">CONTENT</label>
-                                    <textarea id="editor" class="form-control @error('body') is-invalid @enderror" name="body" rows="5">{{ old('body') }}</textarea>
+                                <textarea id="editor" name="body" class="form-control @error('body') is-invalid @enderror" rows="5">{{ old('body') }}</textarea>
 
                             
                                 <!-- error message untuk description -->

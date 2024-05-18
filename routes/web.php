@@ -18,3 +18,4 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/upload', [CKEditorController::class, 'upload'])->name('ckeditor.upload');
 
 Route::get('/article/{post:slug}', [PostController::class, 'article']);
+Route::post('/contact/submit', 'ContactController@submit')->name('contact.submit');

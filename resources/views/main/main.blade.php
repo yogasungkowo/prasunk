@@ -40,22 +40,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="/#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cert">Certification</a>
+                        <a class="nav-link" href="/#cert">Certification</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link" href="/#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#article">Article</a>
+                        <a class="nav-link" href="/#article">Article</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="/#contact">Contact</a>
                     </li>
                 </ul>
             </div>

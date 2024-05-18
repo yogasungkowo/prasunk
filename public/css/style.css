@@ -254,7 +254,6 @@ textarea:valid ~ label {
     color: #ffffff;
 }
 
-
 /* BOTTOM BARS ================================= */
 .bar {
     position: relative;
@@ -344,15 +343,16 @@ textarea:focus ~ .highlight {
 }
 
 .box-article {
-    background-color: #3d3d3d;
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    backdrop-filter: blur(10px);
-}
-
-.white-text {
-    color: white;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(120, 19, 19, 1) 100%
+    );
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (min-width: 1440px) {
