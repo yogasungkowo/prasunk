@@ -33,12 +33,13 @@
 <body>
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-transparent navbar-blur">
         <div class="container-fluid mx-5">
+            <a class="navbar-brand fs-4 mt-2" href="/dashboard">Prasunk</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/#">Home</a>
                     </li>
@@ -59,12 +60,13 @@
                     </li>
                 </ul>
             </div>
-            <a class="navbar-brand ms-auto fs-3" href="/dashboard">Prasunk</a>
         </div>
     </nav>
 
+
     @yield('container')
     <script src="/js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         AOS.init();
@@ -72,13 +74,25 @@
     <script src="/js/script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    var images = document.querySelectorAll('.container-img img');
-    images.forEach(function(img) {
-        img.style.height = '1313px'; // Set tinggi gambar
-        img.style.width = '736px'; // Set lebar gambar
-    });
-});
+            var images = document.querySelectorAll('.container-img img');
+            images.forEach(function(img) {
+                img.style.height = '1313px'; // Set tinggi gambar
+                img.style.width = '736px'; // Set lebar gambar
+            });
+        });
     </script>
+    @if (session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    title: 'Success!',
+                    text: "{{ session('success') }}",
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            });
+        </script>
+    @endif
 </body>
 
 </html>

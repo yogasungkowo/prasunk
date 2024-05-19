@@ -7,10 +7,10 @@
         <section id="header">
             <div
                 class="jumbotron jumbotron-fluid text-white d-flex align-items-center text-left justify-content-center">
-                <div class="container col-xl-auto me-2">
-                    <h1 class="fs-1 fw-bold">Hi, </h1>
-                    <h1 class="fs-1 fw-bold">I'm Prayoga <span style="color: #8FFF00">$</span>ungkowo</h1>
-                    <h1 class="fs-3 fw-bold" style="color: #8FFF00">$ ~ <span class="running-text"></span></h1>
+                <div class="container col-md-auto me-2">
+                        <h1 class="fs-1 fw-bold">Hi, </h1>
+                        <h1 class="fs-1 fw-bold">I'm Prayoga <span style="color: #8FFF00">$</span>ungkowo</h1>
+                        <h1 class="fs-3 fw-bold" style="color: #8FFF00">$ ~ <span class="running-text"></span></h1>
                     <div class="social img-fluid mt-3">
                         <a href="https://www.instagram.com/prayogasungkowo/" target="_blank"><img class="me-3"
                                 src="/asset/instagram.png" alt="instagram" style="width: 44px, height: 44px"></a>
@@ -209,19 +209,19 @@
         </section>
         <section id="contact">
             <div class="container d-flex justify-content-center">
-                <div class="col-md-4">
+                <div class="col-md-4 form-contact">
                     <form method="POST" action="{{ route('contact.submit') }}" data-aos="fade-right">
                         @csrf
                         @method('POST')
                         <div class="group">
-                            <input type="text" required>
+                            <input type="text" name="name" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Name</label>
                         </div>
 
                         <div class="group">
-                            <input type="email" required>
+                            <input type="email" name="email" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Email</label>
@@ -238,7 +238,7 @@
                         </button>
                     </form>
                 </div>
-                <div class="col-md-4" data-aos="fade-left">
+                <div class="col-md-4 contact-text" data-aos="fade-left">
                     <h1 class="fw-bold text-white contact-text">Contact</h1>
                     <h1 class="contact-text" style="color: #8FFF00">$ ~ <span
                             style="color: #ffff; font-weight: bold;">Me</span></h1>

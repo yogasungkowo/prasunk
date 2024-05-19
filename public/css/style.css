@@ -370,3 +370,99 @@ textarea:focus ~ .highlight {
         object-fit: cover;
     }
 }
+
+@media screen and (min-width: 320px) {
+    #about .container {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    #about .about-text {
+        margin-top: 70px !important;
+    }
+
+    .container-img {
+        width: 330px;
+        max-width: 450px;
+    }
+    
+    .container-img img {
+        max-height: 350px;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    #contact container {
+        justify-content: center !important;
+    }
+    #contact .container .form-contact {
+        margin: auto !important;
+    }
+    #contact .contact-text {
+        font-size: 70px !important;
+        margin: auto !important;
+    }
+
+    .navbar .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar .navbar-brand {
+        margin-bottom: 1rem;
+    }
+    
+    #article-content .container .img-fluid img{
+        max-width: 400px;
+        height: auto !important;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+@media screen and  (min-width: 1280px) {
+
+    #about .container {
+        flex-direction: row !important;
+        align-items: center;
+    }
+
+    #about .about-text {
+        margin-top: 70px !important;
+    }
+
+    #article-content .container .img-fluid img{
+        max-width: 1000;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .container-img {
+        width: 359px;
+        max-width: 450px;
+    }
+    
+    .container-img img {
+        max-height: 350px;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    #contact container {
+        justify-content: center !important;
+    }
+    #contact .container .form-contact {
+        margin-left: 100px !important;
+    }
+    #contact .contact-text {
+        font-size: 90px !important;
+        margin:-right 90px !important;
+    }
+}

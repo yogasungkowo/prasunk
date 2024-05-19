@@ -1,11 +1,10 @@
 @extends('dashboard.layouts.main')
 @section('container')
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Tabel Daftar Article</h1>
         </div>
-        <div class="table-responsive small" style="margin: 0 1000px 0 20px">
+        <div class="table-responsive small" style="margin: 0 10px 0 20px">
             <table class="table table-striped table-sm">
                 <thead class="">
                     <tr>
@@ -16,8 +15,6 @@
                 </thead>
                 <tbody class="">
                     @forelse ($post as $posts)
-                        
-                    
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $posts->title }}</td>
@@ -40,9 +37,7 @@
                                 Data Product Belum Tersedia
                             </div>
                         @endforelse
-            
                 </tbody>
             </table>
-
         </div>
     @endsection

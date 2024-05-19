@@ -117,3 +117,4 @@ document.addEventListener("DOMContentLoaded", function() {
         img.style.width = '736px'; // Set lebar gambar
     });
 });
+
